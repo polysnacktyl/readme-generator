@@ -69,7 +69,7 @@ inquirer
 
         console.log(data.contribute);
 
-        const sections = [ '#', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '##Features', '## Contributions', '## Testing', '## License'];
+        const sections = [ '#', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '## License'];
         const [ repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
 
         const licenses = [ '(https://img.shields.io/badge/License-MIT-yellow.svg)', 'https://google.com'];
@@ -104,7 +104,7 @@ ${testing}
 ${data.testing}
 
 ${license}
-${data.license}
+(https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 

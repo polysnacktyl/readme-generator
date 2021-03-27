@@ -1,21 +1,21 @@
 
-# [Readme Generator](https://github.com/polynsnacktyl/readme/)
-(https://github.com/polynsnacktyl/)
+# [Readme Generator](https://github.com/polysnacktyl/readme-generator/)
+(https://github.com/polysnacktyl/)
 
 ## Description
-so very much 
+inquirer
 
 ## Installation 
-npm -
+```npm -i```
 
 ## Usage
-require inquirer require fs 
+require inquirer and fs 
 
 ## Credits 
-so many people i'd like to thank. mom and jesus i guess. 
+stay tuned 
 
-##Features
-writing skillz
+## Features
+
 
 ## Contributions
 undefined
@@ -24,7 +24,7 @@ undefined
 undefined
 
 ## License
-MIT
+(https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 
