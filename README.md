@@ -5,7 +5,7 @@
  
 
 ## Description
-This still-in-progress README generator application was built to speed up the busywork inherent in constructing high-quality repos with high-quality README files. It was also an exercise in learning node js and Inquirer npm. 
+This still-in-progress README generator application was built to speed up the busywork inherent in constructing high-quality repos with high-quality README files. It was also an exercise in learning node js, Inquirer npm, object destructuring, etc. 
 
 ## Installation 
 ```npm -i```
