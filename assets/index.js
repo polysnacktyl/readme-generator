@@ -30,36 +30,36 @@ inquirer
             message: "Describe the project: why did you build it? What did you learn?",
 
         },
-        // {
-        //     type: "input",
-        //     message: "Installation instructions?",
-        //     name: "installation",
-        // },
-        // {
-        //     type: "input",
-        //     message: "provide instructions for use--how to get the development environment running",
-        //     name: "usage",
-        // },
-        // {
-        //     type: "input",
-        //     message: "Credits?",
-        //     name: "credits",
-        // },
-        // {
-        //     type: "input",
-        //     message: "features",
-        //     name: "features",
-        // },
-        // {
-        //     type: "input",
-        //     message: "instructions for contributing to the project",
-        //     name: "contribute",
-        // },
-        // {
-        //     type: "input",
-        //     message: "tested",
-        //     name: "test",
-        // },
+        {
+            type: "input",
+            message: "Installation instructions?",
+            name: "installation",
+        },
+        {
+            type: "input",
+            message: "provide instructions for use--how to get the development environment running",
+            name: "usage",
+        },
+        {
+            type: "input",
+            message: "Credits?",
+            name: "credits",
+        },
+        {
+            type: "input",
+            message: "features",
+            name: "features",
+        },
+        {
+            type: "input",
+            message: "instructions for contributing to the project",
+            name: "contribute",
+        },
+        {
+            type: "input",
+            message: "tested",
+            name: "test",
+        },
 
 
     ])
@@ -67,60 +67,103 @@ inquirer
     
 
     .then((data) => {
+
+        const answered = {data};
+        console.log(answered);
+
+        console.log(data.contribute);
+
+        const sections = [ '#', 'githubName', '## License', '## Description', '## Installation'];
+        const [ repoName, githubName, license, description, installation ] = sections; 
+
+        console.log(license);
+
 let doc = `
-[ License Info ](#license)
-
-[ Usage tips ](#usage)
+${repoName} [Readme Generator](https://github.com/${data.githubName}/${data.repoName}/)
 
 
-# [link-to-deployed-site](https://github.com/${data.githubName}/${data.repoName})
-
-## Description
+${description}
 ${data.description}
+ 
 
-## Installation
+${installation} 
 ${data.installation}
 
-## Usage
-${data.usage} 
+${license}
+${data.license}
 
-## Features
-${data.features} 
 
-## Testing
-${data.test}
+`;
 
-## Contribute
-${data.contribute} 
+           const filename = 'README.md'
+        fs.writeFile(filename, doc, (err) =>
+            err ? console.log(err) : console.log('Success!')
+        );
 
-## Credits 
-${data.credits}
+       
 
-### License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    });
 
 
 
-`
+
+
+
+
+
+
+
+// let doc = `
+// [ License Info ](#license)
+
+// [ Usage tips ](#usage)
+
+
+// # [link-to-deployed-site](https://github.com/${data.githubName}/${data.repoName})
+
+// ## Description
+// ${data.description}
+
+// ## Installation
+// ${data.installation}
+
+// ## Usage
+// ${data.usage} 
+
+// ## Features
+// ${data.features} 
+
+// ## Testing
+// ${data.test}
+
+// ## Contribute
+// ${data.contribute} 
+
+// ## Credits 
+// ${data.credits}
+ 
+// ### License
+// [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+
+
+
+
+
+
 
        
     
 
 
-        // if (data.githubName != null) {
-        //     console.log(`## [A Very Good ReadMe Generator](https://github.com/${data.githubName}/${data.repoName})`);
-        // }
 
 
 
-        const filename = 'README.md'
-        fs.writeFile(filename, doc, (err) =>
-            err ? console.log(err) : console.log('Success!')
-        );
+
+     
 
 
 
-    });
+    
 
 
 
