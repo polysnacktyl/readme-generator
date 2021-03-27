@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const licenses = ["MIT", "Not Mit"];
+const licenses = ["MIT", "unsure/I'll deal with this later"];
 
 inquirer
     .prompt([
@@ -27,79 +27,94 @@ inquirer
             choices: licenses,
         },
 
-        {
-            name: "description",
-            type: "input",
-            message: "Describe the project: why did you build it? What did you learn?",
+        // {
+        //     name: "description",
+        //     type: "input",
+        //     message: "Describe the project: why did you build it? What did you learn?",
 
-        },
-        {
-            type: "input",
-            message: "Installation instructions?",
-            name: "installation",
-        },
-        {
-            type: "input",
-            message: "provide instructions for use--how to get the development environment running",
-            name: "usage",
-        },
-        {
-            type: "input",
-            message: "Credits?",
-            name: "credits",
-        },
-        {
-            type: "input",
-            message: "features",
-            name: "features",
-        },
-        {
-            type: "input",
-            message: "instructions for contributing to the project",
-            name: "contribute",
-        },
-        {
-            type: "input",
-            message: "tested",
-            name: "test",
-        },
+        // },
+        // {
+        //     type: "input",
+        //     message: "Installation instructions?",
+        //     name: "installation",
+        // },
+        // {
+        //     type: "input",
+        //     message: "provide instructions for use--how to get the development environment running",
+        //     name: "usage",
+        // },
+        // {
+        //     type: "input",
+        //     message: "Credits?",
+        //     name: "credits",
+        // },
+        // {
+        //     type: "input",
+        //     message: "features",
+        //     name: "features",
+        // },
+        // {
+        //     type: "input",
+        //     message: "instructions for contributing to the project",
+        //     name: "contribute",
+        // },
+        // {
+        //     type: "input",
+        //     message: "tested",
+        //     name: "test",
+        // },
 
 
     ])
 
     .then((data) => {
-
-        // const answered = {data};
-
-        const sections = [ '#', 'repoName', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '### License'];
-        const [ title, repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
-
-        const licenses = [ '(https://img.shields.io/badge/License-MIT-yellow.svg)', 'https://google.com'];
-        const [ MIT, NotMIT ] = licenses;
         
-        const repoLink = 'https://github.com/${data.githubName}/${data.repoName}/';
+        // function renderLicenseBadge(license) {
+        //     const datalicense = answer.license;
+        //     console.log(datalicense)
+
+        //     switch (license) {
+        //         case "MIT":
+        //             var MITlink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        //             console.log(MITlink);
+        //             break;
+
+        //         case "NotMIT":
+        //             var NotMIT = "";
+        //             console.log(NotMIT);
+        //             break;
+        //     }
+
+        // }
+
+                const sections = [ '#', 'repoName', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '### License'];
+                const [ title, repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
+
+
+
+                const repoLink = 'https://github.com/${data.githubName}/${data.repoName}/';
 
 let doc = `
 ${title} ${data.docTitle}
 [[deployed application]](https://${data.githubName}github.io/${data.repoName}/)  [[repo]](https://github.com/${data.githubName}/${data.repoName}/)
 
 ## Table of Contents
-[description](#${description})
+[description](#description)
 
-[installation](#${installation})
+ [installation](#installation)
 
-[usage](#${usage})
+[usage](#usage)
 
-[credits](#${credits})
+[credits](#credits)
 
-[features](#${features})
+[features](#features)
 
-[contributions](#${contributions})
+[contributions](#contributions)
 
-[testing](#${testing})
+[testing](#testing)
 
-[license](#${license})
- 
+[license](#license)
+
 
 ${description}
 ${data.description}
@@ -129,12 +144,12 @@ ${license}
 
 `;
 
-           const filename = 'README.md'
-        fs.writeFile(filename, doc, (err) =>
-            err ? console.log(err) : console.log('Success!')
-        );
+                   const filename = 'README.md'
+                fs.writeFile(filename, doc, (err) =>
+                    err ? console.log(err) : console.log('Success!')
+                );
 
-       
+
 
     });
 
