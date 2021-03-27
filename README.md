@@ -1,1 +1,32 @@
-# readme-generator
+
+# A Very Good README Generator
+[[deployed application]](https://github.com/polysnacktyl.github.io/polysnacktyl)  [[repo]](https://github.com/polysnacktyl/readme-generator/)
+ 
+
+## Description
+This still-in-progress README generator application was built to speed up the busywork inherent in constructing high-quality repos with high-quality README files. It was also an exercise in learning node js and Inquirer npm. 
+
+## Installation 
+```npm -i```
+
+## Usage
+require: inquirer, fs
+
+## Credits 
+coming soon to a credits section near you 
+
+## Features
+yes, many fine ones
+
+## Contributions
+I made use of [markdown license badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#isc) graciously shared with the world by [lukas-h](https://gist.github.com/lukas-h). 
+
+
+## Testing
+in progress...
+
+### License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+

@@ -69,10 +69,7 @@ inquirer
 
     .then((data) => {
 
-        const answered = {data};
-        console.log(answered);
-
-        console.log(data.contribute);
+        // const answered = {data};
 
         const sections = [ '#', 'repoName', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '### License'];
         const [ title, repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
@@ -81,11 +78,9 @@ inquirer
         const [ MIT, NotMIT ] = licenses;
         
 
-        console.log(license);
-
 let doc = `
 ${title} ${data.docTitle}
-[[deployed application]](https://github.com/${data.githubName}.github.io/${data.githubName})  [[repo]](https://github.com/${data.githubName}/${data.repoName}/)
+[[deployed application]](https://${data.githubName}github.io/${data.repoName}/)  [[repo]](https://github.com/${data.githubName}/${data.repoName}/)
  
 
 ${description}
@@ -124,71 +119,6 @@ ${license}
        
 
     });
-
-
-
-
-
-
-
-
-
-
-// let doc = `
-// [ License Info ](#license)
-
-// [ Usage tips ](#usage)
-
-
-// # [link-to-deployed-site](https://github.com/${data.githubName}/${data.repoName})
-
-// ## Description
-// ${data.description}
-
-// ## Installation
-// ${data.installation}
-
-// ## Usage
-// ${data.usage} 
-
-// ## Features
-// ${data.features} 
-
-// ## Testing
-// ${data.test}
-
-// ## Contribute
-// ${data.contribute} 
-
-// ## Credits 
-// ${data.credits}
- 
-// ### License
-// [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-
-
-
-
-
-
-
-       
-    
-
-
-
-
-
-
-     
-
-
-
-    
-
-
-
-
 
 
 
