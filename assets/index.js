@@ -77,10 +77,28 @@ inquirer
         const licenses = [ '(https://img.shields.io/badge/License-MIT-yellow.svg)', 'https://google.com'];
         const [ MIT, NotMIT ] = licenses;
         
+        const repoLink = 'https://github.com/${data.githubName}/${data.repoName}/';
 
 let doc = `
 ${title} ${data.docTitle}
 [[deployed application]](https://${data.githubName}github.io/${data.repoName}/)  [[repo]](https://github.com/${data.githubName}/${data.repoName}/)
+
+## Table of Contents
+[description](#${description})
+
+[installation](#${installation})
+
+[usage](#${usage})
+
+[credits](#${credits})
+
+[features](#${features})
+
+[contributions](#${contributions})
+
+[testing](#${testing})
+
+[license](#${license})
  
 
 ${description}
