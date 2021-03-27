@@ -1,30 +1,31 @@
 
-# [Readme Generator](https://github.com/polysnacktyl/readme-generator/)
-(https://github.com/polysnacktyl/)
+# A Very Good README Generator
+[[deployed application]](https://github.com/polysnacktyl.github.io/polysnacktyl)  [[repo]](https://github.com/polysnacktyl/readme-generator/)
+ 
 
 ## Description
-inquirer
+inquirer, node js, object destruturing, etc.
 
 ## Installation 
 ```npm -i```
 
 ## Usage
-require inquirer and fs 
+require: inquirer, fs
 
 ## Credits 
-stay tuned 
+coming soon to a credits section near you 
 
 ## Features
-
+yes, many fine ones
 
 ## Contributions
-undefined
+format this bit for emails
 
 ## Testing
-undefined
+in progres
 
-## License
-(https://img.shields.io/badge/License-MIT-yellow.svg)
+### License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 

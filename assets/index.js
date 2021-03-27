@@ -6,6 +6,11 @@ const licenses = ["MIT", "Not Mit"];
 inquirer
     .prompt([
         {
+            name: "docTitle",
+            type: "input",
+            message: "title of repo readme",
+        },
+        {
             name: "repoName",
             type: "input",
             message: "What is the name of the github repository? ex: github.com/username/*repo name*",
@@ -69,8 +74,8 @@ inquirer
 
         console.log(data.contribute);
 
-        const sections = [ '#', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '## License'];
-        const [ repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
+        const sections = [ '#', 'repoName', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '## Features', '## Contributions', '## Testing', '### License'];
+        const [ title, repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
 
         const licenses = [ '(https://img.shields.io/badge/License-MIT-yellow.svg)', 'https://google.com'];
         const [ MIT, NotMIT ] = licenses;
@@ -79,8 +84,9 @@ inquirer
         console.log(license);
 
 let doc = `
-${repoName} [Readme Generator](https://github.com/${data.githubName}/${data.repoName}/)
-(https://github.com/${data.githubName}/)
+${title} ${data.docTitle}
+[[deployed application]](https://github.com/${data.githubName}.github.io/${data.githubName})  [[repo]](https://github.com/${data.githubName}/${data.repoName}/)
+ 
 
 ${description}
 ${data.description}
@@ -98,13 +104,13 @@ ${features}
 ${data.features}
 
 ${contributions}
-${data.contributions}
+${data.contribute}
 
 ${testing}
-${data.testing}
+${data.test}
 
 ${license}
-(https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
