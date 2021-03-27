@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+
 const licenses = ["MIT", "Not MIT", "Something else entirely", "to kill"]
 
 
@@ -95,8 +96,6 @@ ${data.contribute}
 ## Credits 
 ${data.credits}
 
-
-
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -123,43 +122,6 @@ ${data.credits}
 
     });
 
-
-        // ## Description: 
-        // ${response.description}
-
-        // ## Installation:
-        // ${response.installation}
-
-        // ## Usage:
-        // ${response.usage}
-
-        // ## Credits
-        // ${response.credits}
-
-        // ## Contributions
-        // ${response.contribute}
-
-        // ## Testing
-        // ${response.test}
-
-        // [![License: ${response.license}](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-        // `
-
-
-
-
-        // console.log(response.license);
-
-
-
-
-
-
-
-
-
-
-        //         // console.log(doc);
 
 
 
