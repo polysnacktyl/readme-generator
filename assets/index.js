@@ -1,9 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const licenses = ["MIT", "Not MIT", "Something else entirely", "to kill"]
-
-
+const licenses = ["MIT", "Not Mit"];
 
 inquirer
     .prompt([
@@ -64,8 +62,6 @@ inquirer
 
     ])
 
-    
-
     .then((data) => {
 
         const answered = {data};
@@ -73,24 +69,43 @@ inquirer
 
         console.log(data.contribute);
 
-        const sections = [ '#', 'githubName', '## License', '## Description', '## Installation'];
-        const [ repoName, githubName, license, description, installation ] = sections; 
+        const sections = [ '#', 'githubName', '## Description', '## Installation', '## Usage', '## Credits', '##Features', '## Contributions', '## Testing', '## License'];
+        const [ repoName, githubName, description, installation, usage, credits, features, contributions, testing, license] = sections; 
+
+        const licenses = [ '(https://img.shields.io/badge/License-MIT-yellow.svg)', 'https://google.com'];
+        const [ MIT, NotMIT ] = licenses;
+        
 
         console.log(license);
 
 let doc = `
 ${repoName} [Readme Generator](https://github.com/${data.githubName}/${data.repoName}/)
-
+(https://github.com/${data.githubName}/)
 
 ${description}
 ${data.description}
- 
 
 ${installation} 
 ${data.installation}
 
+${usage}
+${data.usage}
+
+${credits} 
+${data.credits}
+
+${features}
+${data.features}
+
+${contributions}
+${data.contributions}
+
+${testing}
+${data.testing}
+
 ${license}
 ${data.license}
+
 
 
 `;
